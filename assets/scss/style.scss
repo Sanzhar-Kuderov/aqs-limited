@@ -1,0 +1,126 @@
+//
+//
+//
+//
+// <Подключаем обнуления>==============================================================
+@import "_zeroing";
+// </Подключаем обнуления>=============================================================
+//
+//
+// <Подключаем шрифт к Google fonts>===================================================
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+// </Подключаем шрифт к Google fonts>==================================================
+
+
+// <Настройка переменых>===============================================================
+$container: 1216px;
+$famileUbuntu: Ubuntu;
+$colorWhite: #fff;
+$colorBlack: #151515;
+$colorDD5900: #DD5900;
+$colorC3C3C3: #C3C3C3;
+$color777777: #777777;
+$color051C34: #051C34;
+$colorDCDCDC: #DCDCDC;
+$colorD9D9D9: #D9D9D9;
+$colorECE7E2: #ECE7E2;
+$color555555: #555555;
+$colorCBCBCB: #CBCBCB;
+$colorC6C6C6: #C6C6C6;
+$colorDADADA: #DADADA;
+$color666666: #666666;
+$color9C9C9C: #9C9C9C;
+// </Настройка переменых>==============================================================
+
+
+// <Оболочка>==========================================================================
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    margin: 0px 0px 0px 0px;
+    padding: 89.5px 0px 0px 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+
+    @media(max-width: 1200px) {
+        padding: 70px 0px 0px;
+    }
+}
+
+.fancybox__container.has-toolbar.is-compact {
+    z-index: 200;
+}
+
+// </Оболочка>=========================================================================
+
+
+// <Настройка основная сетка>==========================================================
+.container {
+    padding: 0px 0px;
+    width: $container;
+    margin: auto;
+
+    @media (max-width: 1270px) {
+        padding: 0px 30px;
+        width: 100%;
+    }
+
+    @media (max-width: 990px) {
+        padding: 0px 20px;
+    }
+
+    @media (max-width: 660px) {
+        padding: 0px 10px;
+    }
+}
+
+// </Настройка основная сетка>=========================================================
+
+
+// <Настройка основной контент>========================================================
+.body {
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+// </Настройка основной контент>=======================================================
+
+
+// <Подключение стилистика>============================================================
+// <Подключаем header>=================================================================
+@import "_header";
+// </Подключаем header>================================================================
+
+// <Подключаем прочие стилистика>======================================================
+@import 'block/_logo';
+@import 'block/_slick';
+@import 'block/_text';
+@import 'block/_social';
+@import 'block/_navigator';
+@import 'block/_modal';
+@import 'block/_magic_forms';
+@import 'template/_home';
+@import 'template/_about';
+@import 'template/_services';
+@import 'template/_safety';
+@import 'template/_vacancy';
+@import 'template/_news';
+@import 'template/_newsBlog';
+@import 'template/_contact';
+// </Подключаем настройка стилистика>==================================================
+
+// <Подключаем footer>=================================================================
+@import '_footer';
+// </Подключаем footer>================================================================
+// </Подключение стилистика>===========================================================

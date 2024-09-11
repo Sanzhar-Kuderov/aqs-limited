@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>AQS</title>
+</head>
+
+<body class="body">
+
+    <div class="wrapper">
+
+        <header class="header" id="header">
+            <div class="main-header">
+                <div class="container">
+                    <div class="main-header__body">
+                        <div class="main-header__logo">
+                            <a href="index.html" class="logo">
+                                <div class="logo__body">
+                                    <div class="logo__img">
+                                        <img src="assets/img/logo/main.svg" alt="logo">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="main-header__menu">
+                            <li class="main-header__menu-item">
+                                <a href="about.html" class="main-header__menu-link">О нас</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="services.html" class="main-header__menu-link">Сервисы</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="safety.html" class="main-header__menu-link">Безопасность</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="vacancy.html" class="main-header__menu-link">Вакансии</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="news.html" class="main-header__menu-link">Новости</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="contect.html" class="main-header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <a href="tel:+77074449009" class="main-header__phone">
+                            <div class="main-header__phone-img">
+                                <img src="assets/img/icon/phone.svg" alt="phone">
+                            </div>
+                            <div class="main-header__phone-text">
+                                +7 (707)444–90–09
+                            </div>
+                        </a>
+                        <div class="main-header__language">
+                            <div class="main-header__language-img">
+                                <img src="assets/img/icon/language.svg" alt="language">
+                            </div>
+                            <select name="" id="" class="main-header__language-select">
+                                <option value="">eng</option>
+                                <option value="">rus</option>
+                                <option value="">kaz</option>
+                            </select>
+                        </div>
+                        <div class="main-header__social">
+                            <a href="" class="main-header__social-img mail">
+                                <img src="assets/img/icon/mail.svg" alt="mail">
+                                <img src="assets/img/icon/mail-active.svg" alt="mail">
+                            </a>
+                            <a href="" class="main-header__social-img whatsapp">
+                                <img src="assets/img/icon/whatsapp.svg" alt="whatsapp">
+                                <img src="assets/img/icon/whatsapp-active.svg" alt="whatsapp">
+                            </a>
+                            <a href="" class="main-header__social-img search">
+                                <img src="assets/img/icon/search.svg" alt="search">
+                                <img src="assets/img/icon/search-active.svg" alt="search">
+                            </a>
+                        </div>
+                        <a href="tel:+77074449009" class="main-header__phone-smart">
+                            <div class="main-header__phone-smart-img">
+                                <img src="assets/img/icon/phone-white.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="main-header__burger">
+                            <div class="main-header__burger-img" id="burger">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="smartphone-header">
+                <div class="container">
+                    <div class="smartphone-header__body">
+                        <div class="smartphone-header__exit">
+                            <div class="smartphone-header__exit-img" id="smartphone_menu_exit">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="smartphone-header__logo">
+                            <a href="index.html" class="logo">
+                                <div class="logo__body">
+                                    <div class="logo__img">
+                                        <img src="assets/img/logo/main.svg" alt="logo">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="smartphone-header__menu">
+                            <li class="smartphone-header__menu-item">
+                                <a href="about.html" class="smartphone-header__menu-link">О нас</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="services.html" class="smartphone-header__menu-link">Cервисы</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="safety.html" class="smartphone-header__menu-link">Безопасность</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="vacancy.html" class="smartphone-header__menu-link">Вакансии</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="news.html" class="smartphone-header__menu-link">Новости</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="contect.html" class="smartphone-header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="smartphone-header__content">
+                            <div class="smartphone-header__social">
+                                <div class="smartphone-header__social-img mail">
+                                    <img src="assets/img/icon/mail.svg" alt="">
+                                </div>
+                                <div class="smartphone-header__social-img whatsapp">
+                                    <img src="assets/img/icon/whatsapp.svg" alt="">
+                                </div>
+                                <div class="smartphone-header__social-img search">
+                                    <img src="assets/img/icon/search.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="smartphone-header__language">
+                                <select name="" id="" class="smartphone-header__language-select">
+                                    <option value="">eng</option>
+                                    <option value="">rus</option>
+                                    <option value="">kaz</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main newsBlog">
+
+            <div class="return-newsBlog">
+                <div class="container">
+                    <div class="return-newsBlog__body">
+                        <a href="news.html" class="return-newsBlog__link">
+                            <div class="return-newsBlog__img">
+                                <img src="assets/img/icon/arrow-news.svg" alt="arrow">
+                                <img src="assets/img/icon/arrow-news-active.svg" alt="arrow">
+                            </div>
+                            <div class="return-newsBlog__text">
+                                Назад к новостям
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-newsBlog">
+                <div class="container">
+                    <div class="content-newsBlog__body">
+                        <div class="content-newsBlog__title">
+                            Мы рады поделиться новостью о успешном завершении геологоразведочных работ в Жамбылской
+                            области
+                        </div>
+                        <div class="content-newsBlog__text">
+                            Целью проведения геологоразведочных работ на Кемирской площади является обнаружение
+                            промышленно значимых месторождений меди, золота и сопутствующих компонентов, а также редких
+                            металлов в пределах этой области. Их разработка планируется способствовать экономическому
+                            развитию региона и всей области. Группа компании "Аврора Минералс Групп" провела колонковое
+                            бурение с геологическим и геофизическим сопровождением работ. Бурение началось 6 октября
+                            2023 года при помощи двух буровых станков, принадлежащих частной компании "AQS Limited".
+                        </div>
+                        <div class="content-newsBlog__banner">
+                            Буровая команда, участковые геологи и геофизики проживали в поселке Акбакай, который
+                            располагался в 50 километрах от рабочего участка. Запланированный объем буровых работ
+                            составил 1900 метров, и буровая команда успешно справилась с этой задачей менее чем за
+                            месяц. Контроль за бурением осуществляли сотрудники "Aurora Minerals Group". Участковые
+                            геологи ежедневно посещали буровую площадку после выноса скважин, проверяя керновый материал
+                            на предмет ошибок и ведя первичную документацию по керну.
+
+                        </div>
+                        <div class="content-newsBlog__title">
+                            Основная часть геологического сопровождения буровых работ
+                        </div>
+                        <div class="content-newsBlog__text">
+                            Основная часть геологического сопровождения буровых работ, включая геологическую
+                            документацию, распиловку и опробование керна, проводилась в городе Балхаш после того, как
+                            керн был доставлен из поселка Акбакай при помощи компании ТОО "AQS Limited".
+                            После завершения геологической работы на месте проведения буровых работ осуществлялась
+                            рекультивация нарушенных земель под контролем участкового геолога в соответствии со статьей
+                            238 Экологического кодекса РК. Кроме того, в соответствии со стандартами, устье каждой
+                            забуренной скважины было закрыто бетоном и закреплено репером, содержащим определенные
+                            данные о скважине, такие как ее название, глубина, угол наклона и азимут бурения.
+                            После ежедневного приема керна у буровой команды, участковый геолог проводил проверку
+                            каждого бурового рейса, измерял выход керна, отмечал механические трещины и осматривал керн
+                            на наличие рудной минерализации.
+
+                        </div>
+                        <div class="content-newsBlog__imgs">
+                            <div class="content-newsBlog__img">
+                                <img src="assets/img/news/blog-1.jpg" alt="news">
+                            </div>
+                            <div class="content-newsBlog__img">
+                                <img src="assets/img/news/blog-2.jpg" alt="news">
+                            </div>
+                            <div class="content-newsBlog__img">
+                                <img src="assets/img/news/blog-3.jpg" alt="news">
+                            </div>
+                        </div>
+                        <div class="content-newsBlog__title">
+                            Геологоразведочные работы проводились в соответствии с международными стандартами контроля
+                            качества
+                        </div>
+                        <div class="content-newsBlog__text">
+                            Геофизические исследования скважин осуществлялись частной компанией "Aurora Geophysics
+                            Limited". В рамках комплекса работ проводились замеры инклинометрии, гамма каротаж, ПС, КС и
+                            ВП. Геофизическая команда также располагалась в поселке Акбакай и выезжала на участок работ
+                            после каждых пробуренных 50 метров для замера искривления скважины. По запросу клиентов
+                            максимальный угол отклонения скважин не превышал 3° на каждые 100 метров. Остальные виды
+                            каротажных работ проводились при достижении проектной глубины скважины.
+                            Первоначально керн тщательно исследовался на предмет наличия минеральных отложений, затем
+                            проводилась подробная документация с разделением на различные литологические разности и
+                            интервалы опробования. После этого наносилась линия распила керна, и производилась
+                            фотодокументация. Финальным этапом было распиливание керна с последующим отбором образцов и
+                            их отправкой в лабораторию для анализа. Геологоразведочные работы проводились в соответствии
+                            с международными стандартами контроля качества QA/QC и Кодексом о недрах и недропользовании
+                            РК.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <div class="social">
+            <div class="social__body">
+                <a href="" class="social__img-whatsapp">
+                    <img src="assets/img/icon/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="#header" class="social__img-link-header">
+                    <img src="assets/img/icon/arrow-header.svg" alt="arrow-header">
+                    <img src="assets/img/icon/arrow-header-active.svg" alt="arrow-header">
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="main-footer">
+                <div class="container">
+                    <div class="main-footer__body">
+                        <div class="main-footer__logo">
+                            <div class="logo">
+                                <div class="logo__body">
+                                    <div class="logo__img">
+                                        <img src="assets/img/logo/footer.svg" alt="logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-footer__content">
+                            <div class="main-footer__column">
+                                <div class="main-footer__title">Навигация</div>
+                                <ul class="main-footer__menu">
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">О компании</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Новости</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Безопасность</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Вакансии</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-footer__column">
+                                <div class="main-footer__title">Cервисы</div>
+                                <ul class="main-footer__menu">
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Сервис 1</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Сервис 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-footer__column">
+                                <div class="main-footer__title">Контакты</div>
+                                <ul class="main-footer__menu">
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">
+                                            Республика Казахстан, Астана, ул. Д. Кунаева 12/1
+                                        </a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="tel:+77074449009" class="main-footer__menu-link">+7 (707)444–90–09</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="mailto:info@drillservice.kz"
+                                            class="main-footer__menu-link">info@drillservice.kz</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="contect.html" class="main-footer__menu-link">Смотреть все</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-footer__submit">
+                            <a href="" class="main-footer__submit-link">
+                                Cвяжитесь с нами
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="politics-footer">
+                <div class="container">
+                    <div class="politics-footer__body">
+                        <div class="politics-footer__logo">
+                            <span>Разработано в</span>
+                            <a href="https://abc-design.kz" target="_blank">
+                                <img src="assets/img/logo/ABC_DESIGN.svg" alt="ABC DESIGN">
+                            </a>
+                            <span>создание сайтов в Астане</span>
+                        </div>
+                        <div class="politics-footer__socila">
+                            <a href="" class="politics-footer__social-img">
+                                <img src="assets/img/icon/mail.svg" alt="mail">
+                                <img src="assets/img/icon/mail-active.svg" alt="mail">
+                            </a>
+                            <a href="" class="politics-footer__social-img">
+                                <img src="assets/img/icon/whatsapp.svg" alt="whatsapp">
+                                <img src="assets/img/icon/whatsapp-active.svg" alt="whatsapp">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="assets/js/jQuery-3.7.1.min.js"></script>
+    <script src="assets/js/jquery.maskedinput.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

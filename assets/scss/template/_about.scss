@@ -1,0 +1,258 @@
+//
+//
+//
+//
+// ====================================================================================
+.main.about {}
+
+// ====================================================================================
+.content-about {}
+
+.content-about__body {
+    margin: 75px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-about__img {
+    padding: 0px 20px 0px 0px;
+    flex: 1 0 50%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.content-about__content {
+    flex: 1 0 50%;
+    padding: 0px 0px 0px 80px;
+}
+
+.content-about__title {
+    margin: 0px 0px 68px;
+}
+
+.content-about__text {
+    font-family: $famileUbuntu;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color777777;
+
+    p {
+        margin: 0px 0px 10px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+@media(max-width: 950px) {
+    .content-about__body {
+        flex-direction: column;
+    }
+
+    .content-about__img {
+        margin: 0px 0px 30px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .content-about__content {
+        padding: 0;
+    }
+}
+
+@media(max-width: 770px) {
+    .content-about__body {
+        margin: 50px 0px;
+    }
+
+    .content-about__title {
+        margin: 0px 0px 30px;
+    }
+
+    .content-about__text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+// ====================================================================================
+.certificate-about {}
+
+.certificate-about__body {
+    margin: 0px 0px 75px
+}
+
+.certificate-about__title {
+    margin: 0px 0px 60px;
+}
+
+.certificate-about__content {
+    margin: 0px -32px;
+    overflow: hidden;
+}
+
+.certificate-about__column {
+    margin: 0px 32px;
+    width: 100%;
+}
+
+.certificate-about__column-body {
+    padding: 4px;
+    width: 100%;
+    height: 100%;
+    border: 10px solid $colorBlack;
+}
+
+.certificate-about__column-img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border: 10px solid $colorC6C6C6;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media(max-width: 770px) {
+    .certificate-about__body {
+        margin: 0px 0px 50px;
+    }
+
+    .certificate-about__title {
+        margin: 0px 0px 30px;
+    }
+}
+
+// ====================================================================================
+.team-about {}
+
+.team-about__body {
+    margin: 0px 0px 75px;
+}
+
+.team-about__title {
+    margin: 0px 0px 60px;
+}
+
+.team-about__row {
+    margin: 0px -16px;
+    overflow: hidden;
+
+    .slick-dots {
+        margin: 35px 0px 0px;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0px 7px 0px 0px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid $colorWhite;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s all;
+        }
+
+        .slick-active {
+            border: 1px solid $colorBlack;
+        }
+
+        button {
+            width: 3.75px;
+            height: 3.75px;
+            border-radius: 50%;
+            background: $colorBlack;
+            font-size: 0;
+        }
+    }
+}
+
+.team-about__column {
+    margin: 0px 16px;
+    width: 100%;
+}
+
+.team-about__column-body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.team-about__column-img {
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.team-about__column-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 23px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.team-about__conten-body {
+    padding: 18px 10px 27px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        color: white;
+        z-index: -1;
+    }
+}
+
+.team-about__conten-title {
+    margin: 0px 0px 10px;
+    text-align: center;
+    font-family: $famileUbuntu;
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 500;
+    color: $colorBlack;
+}
+
+.team-about__conten-text {
+    text-align: center;
+    font-family: $famileUbuntu;
+    font-size: 15px;
+    line-height: 17px;
+    color: $color555555;
+}
+
+@media(max-width: 770px) {
+    .team-about__body {
+        margin: 0px 0px 50px;
+    }
+
+    .team-about__title {
+        margin: 0px 0px 30px;
+    }
+}

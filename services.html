@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>AQS</title>
+</head>
+
+<body class="body">
+
+    <div class="wrapper">
+
+        <header class="header" id="header">
+            <div class="main-header">
+                <div class="container">
+                    <div class="main-header__body">
+                        <div class="main-header__logo">
+                            <a href="index.html" class="logo">
+                                <div class="logo__body">
+                                    <div class="logo__img">
+                                        <img src="assets/img/logo/main.svg" alt="logo">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="main-header__menu">
+                            <li class="main-header__menu-item">
+                                <a href="about.html" class="main-header__menu-link">О нас</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="services.html" class="main-header__menu-link">Сервисы</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="safety.html" class="main-header__menu-link">Безопасность</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="vacancy.html" class="main-header__menu-link">Вакансии</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="news.html" class="main-header__menu-link">Новости</a>
+                            </li>
+                            <li class="main-header__menu-item">
+                                <a href="contect.html" class="main-header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <a href="tel:+77074449009" class="main-header__phone">
+                            <div class="main-header__phone-img">
+                                <img src="assets/img/icon/phone.svg" alt="phone">
+                            </div>
+                            <div class="main-header__phone-text">
+                                +7 (707)444–90–09
+                            </div>
+                        </a>
+                        <div class="main-header__language">
+                            <div class="main-header__language-img">
+                                <img src="assets/img/icon/language.svg" alt="language">
+                            </div>
+                            <select name="" id="" class="main-header__language-select">
+                                <option value="">eng</option>
+                                <option value="">rus</option>
+                                <option value="">kaz</option>
+                            </select>
+                        </div>
+                        <div class="main-header__social">
+                            <a href="" class="main-header__social-img mail">
+                                <img src="assets/img/icon/mail.svg" alt="mail">
+                                <img src="assets/img/icon/mail-active.svg" alt="mail">
+                            </a>
+                            <a href="" class="main-header__social-img whatsapp">
+                                <img src="assets/img/icon/whatsapp.svg" alt="whatsapp">
+                                <img src="assets/img/icon/whatsapp-active.svg" alt="whatsapp">
+                            </a>
+                            <a href="" class="main-header__social-img search">
+                                <img src="assets/img/icon/search.svg" alt="search">
+                                <img src="assets/img/icon/search-active.svg" alt="search">
+                            </a>
+                        </div>
+                        <a href="tel:+77074449009" class="main-header__phone-smart">
+                            <div class="main-header__phone-smart-img">
+                                <img src="assets/img/icon/phone-white.svg" alt="">
+                            </div>
+                        </a>
+                        <div class="main-header__burger">
+                            <div class="main-header__burger-img" id="burger">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="smartphone-header">
+                <div class="container">
+                    <div class="smartphone-header__body">
+                        <div class="smartphone-header__exit">
+                            <div class="smartphone-header__exit-img" id="smartphone_menu_exit">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="smartphone-header__logo">
+                            <a href="index.html" class="logo">
+                                <div class="logo__body">
+                                    <div class="logo__img">
+                                        <img src="assets/img/logo/main.svg" alt="logo">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="smartphone-header__menu">
+                            <li class="smartphone-header__menu-item">
+                                <a href="about.html" class="smartphone-header__menu-link">О нас</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="services.html" class="smartphone-header__menu-link">Cервисы</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="safety.html" class="smartphone-header__menu-link">Безопасность</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="vacancy.html" class="smartphone-header__menu-link">Вакансии</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="news.html" class="smartphone-header__menu-link">Новости</a>
+                            </li>
+                            <li class="smartphone-header__menu-item">
+                                <a href="contect.html" class="smartphone-header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="smartphone-header__content">
+                            <div class="smartphone-header__social">
+                                <div class="smartphone-header__social-img mail">
+                                    <img src="assets/img/icon/mail.svg" alt="">
+                                </div>
+                                <div class="smartphone-header__social-img whatsapp">
+                                    <img src="assets/img/icon/whatsapp.svg" alt="">
+                                </div>
+                                <div class="smartphone-header__social-img search">
+                                    <img src="assets/img/icon/search.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="smartphone-header__language">
+                                <select name="" id="" class="smartphone-header__language-select">
+                                    <option value="">eng</option>
+                                    <option value="">rus</option>
+                                    <option value="">kaz</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main services">
+
+            <div class="mini-navigation">
+                <div class="container">
+                    <div class="mini-navigation__body">
+                        <div class="mini-navigation__title">
+                            Сервисы
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-services">
+                <div class="container">
+                    <div class="content-services__body">
+                        <div class="content-services__row">
+                            <div class="content-services__row">
+                                <div class="content-services__img">
+                                    <img src="assets/img/services/content.jpg" alt="content">
+                                </div>
+                                <div class="content-services__content">
+                                    <div class="content-services__content-title title">
+                                        Название сервиса
+                                    </div>
+                                    <div class="content-services__content-text">
+                                        <div class="content-services__content-icon">
+                                            <span></span>
+                                        </div>
+                                        <p>
+                                            Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.
+                                            Вам будет необходимо предоставить исходные данные, по которым наши
+                                            копирайтеры составят правильный текст.
+                                        </p>
+                                    </div>
+                                    <div class="content-services__content-text">
+                                        <div class="content-services__content-icon">
+                                            <span></span>
+                                        </div>
+                                        <p>
+                                            Мини-описание, для дальнейшего продвижения Вашего сайта. Вам будет
+                                            необходимо предоставить исходные данные, по которым наши копирайтеры
+                                            составят правильный текст.
+                                        </p>
+                                    </div>
+                                    <div class="content-services__content-text">
+                                        <div class="content-services__content-icon">
+                                            <span></span>
+                                        </div>
+                                        <p>
+                                            Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-services__row contrary">
+                            <div class="content-services__img">
+                                <img src="assets/img/services/content.jpg" alt="content">
+                            </div>
+                            <div class="content-services__content">
+                                <div class="content-services__content-title title">
+                                    Название сервиса
+                                </div>
+                                <div class="content-services__content-text">
+                                    <div class="content-services__content-icon">
+                                        <span></span>
+                                    </div>
+                                    <p>
+                                        Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.
+                                        Вам будет необходимо предоставить исходные данные, по которым наши
+                                        копирайтеры составят правильный текст.
+                                    </p>
+                                </div>
+                                <div class="content-services__content-text">
+                                    <div class="content-services__content-icon">
+                                        <span></span>
+                                    </div>
+                                    <p>
+                                        Мини-описание, для дальнейшего продвижения Вашего сайта. Вам будет
+                                        необходимо предоставить исходные данные, по которым наши копирайтеры
+                                        составят правильный текст.
+                                    </p>
+                                </div>
+                                <div class="content-services__content-text">
+                                    <div class="content-services__content-icon">
+                                        <span></span>
+                                    </div>
+                                    <p>
+                                        Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-services">
+                <div class="contact-services__fullscreen">
+                    <img src="assets/img/services/contact.jpg" alt="contact">
+                </div>
+                <div class="container">
+                    <div class="contact-services__body">
+                        <div class="contact-services__title">
+                            Связаться с нами
+                        </div>
+                        <div class="contact-services__subtitle">
+                            Заполните данные и мы свяжемся с вами
+                        </div>
+                        <form action="" class="contact-services__form">
+                            <div class="contact-services__form-inputs">
+                                <input type="name" class="contact-services__form-input" placeholder="Ваше имя" required>
+                                <input type="tel" class="contact-services__form-input" placeholder="+7 (...)"
+                                    attern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="filter-phone" required>
+                            </div>
+                            <textarea name="" id="" class="contact-services__form-textarea"
+                                placeholder="Ваш комментарий" required></textarea>
+                            <input type="submit" class="contact-services__form-submit" value="Оставить заявку">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate-about">
+                <div class="container">
+                    <div class="certificate-about__body">
+                        <div class="certificate-about__title title">
+                            Соблюдаем международные стандарты
+                        </div>
+                        <div class="certificate-about__content">
+                            <div class="certificate-about__column">
+                                <div class="certificate-about__column-body">
+                                    <a href="assets/img/about/certificate.jpg" class="certificate-about__column-img"
+                                        data-fancybox="certificate">
+                                        <img src="assets/img/about/certificate.jpg" alt="certificate">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="certificate-about__column">
+                                <div class="certificate-about__column-body">
+                                    <a href="assets/img/about/certificate.jpg" class="certificate-about__column-img"
+                                        data-fancybox="certificate">
+                                        <img src="assets/img/about/certificate.jpg" alt="certificate">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="certificate-about__column">
+                                <div class="certificate-about__column-body">
+                                    <a href="assets/img/about/certificate.jpg" class="certificate-about__column-img"
+                                        data-fancybox="certificate">
+                                        <img src="assets/img/about/certificate.jpg" alt="certificate">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="certificate-about__column">
+                                <div class="certificate-about__column-body">
+                                    <a href="assets/img/about/certificate.jpg" class="certificate-about__column-img"
+                                        data-fancybox="certificate">
+                                        <img src="assets/img/about/certificate.jpg" alt="certificate">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <div class="social">
+            <div class="social__body">
+                <a href="" class="social__img-whatsapp">
+                    <img src="assets/img/icon/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="#header" class="social__img-link-header">
+                    <img src="assets/img/icon/arrow-header.svg" alt="arrow-header">
+                    <img src="assets/img/icon/arrow-header-active.svg" alt="arrow-header">
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="main-footer">
+                <div class="container">
+                    <div class="main-footer__body">
+                        <div class="main-footer__logo">
+                            <div class="logo">
+                                <div class="logo__body">
+                                    <div class="logo__img">
+                                        <img src="assets/img/logo/footer.svg" alt="logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-footer__content">
+                            <div class="main-footer__column">
+                                <div class="main-footer__title">Навигация</div>
+                                <ul class="main-footer__menu">
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">О компании</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Новости</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Безопасность</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Вакансии</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-footer__column">
+                                <div class="main-footer__title">Cервисы</div>
+                                <ul class="main-footer__menu">
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Сервис 1</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">Сервис 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-footer__column">
+                                <div class="main-footer__title">Контакты</div>
+                                <ul class="main-footer__menu">
+                                    <li class="main-footer__menu-item">
+                                        <a href="" class="main-footer__menu-link">
+                                            Республика Казахстан, Астана, ул. Д. Кунаева 12/1
+                                        </a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="tel:+77074449009" class="main-footer__menu-link">+7 (707)444–90–09</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="mailto:info@drillservice.kz"
+                                            class="main-footer__menu-link">info@drillservice.kz</a>
+                                    </li>
+                                    <li class="main-footer__menu-item">
+                                        <a href="contect.html" class="main-footer__menu-link">Смотреть все</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-footer__submit">
+                            <a href="" class="main-footer__submit-link">
+                                Cвяжитесь с нами
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="politics-footer">
+                <div class="container">
+                    <div class="politics-footer__body">
+                        <div class="politics-footer__logo">
+                            <span>Разработано в</span>
+                            <a href="https://abc-design.kz" target="_blank">
+                                <img src="assets/img/logo/ABC_DESIGN.svg" alt="ABC DESIGN">
+                            </a>
+                            <span>создание сайтов в Астане</span>
+                        </div>
+                        <div class="politics-footer__socila">
+                            <a href="" class="politics-footer__social-img">
+                                <img src="assets/img/icon/mail.svg" alt="mail">
+                                <img src="assets/img/icon/mail-active.svg" alt="mail">
+                            </a>
+                            <a href="" class="politics-footer__social-img">
+                                <img src="assets/img/icon/whatsapp.svg" alt="whatsapp">
+                                <img src="assets/img/icon/whatsapp-active.svg" alt="whatsapp">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="assets/js/jQuery-3.7.1.min.js"></script>
+    <script src="assets/js/jquery.maskedinput.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

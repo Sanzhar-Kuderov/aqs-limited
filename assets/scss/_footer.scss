@@ -1,0 +1,199 @@
+//
+//
+//
+//
+// ====================================================================================
+.footer {
+    background: $colorECE7E2;
+}
+
+// ====================================================================================
+.main-footer {}
+
+.main-footer__body {
+    padding: 63px 0px 72px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer__logo {}
+
+.main-footer__content {
+    display: flex;
+}
+
+.main-footer__column {
+    margin: 0px 47px 0px 0px;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &:last-child {
+        .main-footer__menu-item:last-child {
+            .main-footer__menu-link {
+                text-decoration: underline;
+                color: $colorDD5900;
+            }
+        }
+    }
+}
+
+.main-footer__title {
+    margin: 0px 0px 20px;
+    font-family: $famileUbuntu;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $colorBlack;
+}
+
+.main-footer__menu {
+    max-width: 210px;
+}
+
+.main-footer__menu-item {
+    margin: 0px 0px 10px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.main-footer__menu-link {
+    font-family: $famileUbuntu;
+    line-height: 16px;
+    color: $color555555;
+    transition: 0.3s all;
+
+    &:hover {
+        color: $colorDD5900;
+    }
+}
+
+.main-footer__submit {}
+
+.main-footer__submit-link {
+    padding: 16px 50px;
+    border: 2px solid $colorDD5900;
+    border-radius: 50px;
+    display: inline-block;
+    background: $colorDD5900;
+    font-family: $famileUbuntu;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $colorWhite;
+    transition: 0.3s all;
+
+    &:hover {
+        background: transparent;
+        color: $colorDD5900;
+    }
+}
+
+@media(max-width: 950px) {
+    .main-footer__body {
+        flex-direction: column;
+    }
+
+    .main-footer__logo {
+        margin: 0px 0px 30px;
+    }
+
+    .main-footer__content {
+        margin: 0px 0px 30px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 770px) {
+    .main-footer__body {
+        padding: 40px 0px;
+    }
+}
+
+@media(max-width: 550px) {
+    .main-footer__content {
+        flex-direction: column;
+    }
+
+    .main-footer__column {
+        margin: 0px 0px 40px;
+    }
+}
+
+// ====================================================================================
+.politics-footer {}
+
+.politics-footer__body {
+    padding: 18px 0px 26px;
+    border-top: 1px solid $colorCBCBCB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.politics-footer__logo {
+    font-family: $famileUbuntu;
+    display: flex;
+    flex-wrap: wrap;
+    color: $colorBlack;
+
+    span {
+        display: block;
+    }
+
+    a {
+        padding: 0px 5px 0px;
+        display: block;
+        color: $colorWhite;
+    }
+
+    img {
+        padding: 2px 3px 0px 0px;
+    }
+}
+
+.politics-footer__socila {
+    display: flex;
+}
+
+.politics-footer__social-img {
+    margin: 0px 5px 0px 0px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $colorDD5900;
+    border-radius: 50%;
+    background: $colorDD5900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    img:last-child {
+        display: none;
+    }
+
+    &:hover {
+        background: transparent;
+
+        img:nth-child(1) {
+            display: none;
+        }
+
+        img:nth-child(2) {
+            display: block;
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .politics-footer__body {
+        padding: 10px 0px;
+    }
+}

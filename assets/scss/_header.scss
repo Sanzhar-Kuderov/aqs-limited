@@ -1,0 +1,349 @@
+//
+//
+//
+//
+// ====================================================================================
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $colorWhite;
+    box-shadow: 0px 0px 12px 0px #0000001F;
+    z-index: 2000;
+}
+
+// ====================================================================================
+.main-header {}
+
+.main-header__body {
+    padding: 25px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header__logo {}
+
+.main-header__menu {
+    display: flex;
+    align-items: center;
+}
+
+.main-header__menu-item {
+    margin: 0px 18px 0px 0px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.main-header__menu-link {
+    font-family: $famileUbuntu;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $colorBlack;
+    transition: 0.3s all;
+
+    &:hover {
+        color: $colorDD5900;
+    }
+}
+
+.main-header__phone {
+    display: flex;
+
+    &:hover {
+        .main-header__phone-text {
+            color: $colorDD5900;
+        }
+    }
+}
+
+.main-header__phone-img {
+    margin: 0px 10px 0px 0px;
+}
+
+.main-header__phone-text {
+    font-family: $famileUbuntu;
+    font-size: 16px;
+    line-height: 18px;
+    color: $colorBlack;
+    transition: 0.3s all;
+}
+
+.main-header__language {
+    display: flex;
+}
+
+.main-header__language-img {
+    margin: 0px 3px 0px 0px;
+}
+
+.main-header__language-select {
+    font-family: $famileUbuntu;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $colorBlack;
+    cursor: pointer;
+}
+
+.main-header__social {
+    display: flex;
+}
+
+.main-header__social-img {
+    margin: 0px 5px 0px 0px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $colorDD5900;
+    border-radius: 50%;
+    background: $colorDD5900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    img:nth-child(2) {
+        display: none;
+    }
+
+    &:hover {
+        background: transparent;
+
+        img:nth-child(1) {
+            display: none;
+        }
+
+        img:nth-child(2) {
+            display: block;
+        }
+    }
+
+    &.mail {}
+
+    &.whatsapp {}
+
+    &.search {}
+}
+
+.main-header__phone-smart {
+    margin: 0px 10px 0px 0px;
+    display: none;
+}
+
+.main-header__phone-smart-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $colorDD5900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header__burger {
+    display: none;
+}
+
+.main-header__burger-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $colorDD5900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        width: 25px;
+        height: 3px;
+        display: block;
+        background: $colorWhite;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $colorWhite;
+        }
+
+        &::before {
+            top: -7px;
+        }
+
+        &::after {
+            bottom: -7px;
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .main-header__body {
+        padding: 15px 0px;
+        justify-content: normal;
+    }
+
+    .main-header__logo {
+        flex: auto;
+    }
+
+    .main-header__menu {
+        display: none;
+    }
+
+    .main-header__phone {
+        display: none;
+    }
+
+    .main-header__language {
+        display: none;
+    }
+
+    .main-header__social {
+        display: none;
+    }
+
+    .main-header__phone-smart {
+        display: block;
+    }
+
+    .main-header__burger {
+        display: block;
+    }
+}
+
+// ====================================================================================
+.smartphone-header {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: $colorWhite;
+    transition: 0.3s all;
+
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.active {
+        right: 0;
+    }
+}
+
+.smartphone-header__body {
+    padding: 10px 10px 30px 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.smartphone-header__exit {
+    margin: 0px 0px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.smartphone-header__exit-img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        width: 100%;
+        height: 5px;
+        display: block;
+        background: $colorDD5900;
+        position: relative;
+        transform: rotate(45deg);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: $colorDD5900;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.smartphone-header__logo {
+    margin: 0px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.smartphone-header__menu {
+    flex: auto;
+}
+
+.smartphone-header__menu-item {
+    margin: 0px 0px 20px;
+    text-align: center;
+}
+
+.smartphone-header__menu-link {
+    font-family: $famileUbuntu;
+    font-size: 20px;
+    line-height: 24px;
+    color: $colorBlack;
+    transition: 0.3s all;
+
+    &:hover {
+        color: $colorDD5900;
+    }
+}
+
+.smartphone-header__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smartphone-header__social {
+    display: flex;
+}
+
+.smartphone-header__social-img {
+    margin: 0px 10px 0px 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $colorDD5900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .whatsapp {}
+
+    .search {}
+}
+
+.smartphone-header__language {}
+
+.smartphone-header__language-select {
+    font-family: $famileUbuntu;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $colorBlack;
+}

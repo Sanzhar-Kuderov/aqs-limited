@@ -1,0 +1,58 @@
+//
+//
+//
+//
+// ====================================================================================
+.social {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1500;
+}
+
+.social__body {
+    padding: 0px 20px 26px 0px;
+}
+
+.social__img-whatsapp {
+    margin: 0px 0px 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1BBD2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 30px;
+    }
+}
+
+.social__img-link-header {
+    width: 48px;
+    height: 48px;
+    border: 2px solid $colorDD5900;
+    border-radius: 50%;
+    background: $colorDD5900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+
+    img:last-child {
+        display: none;
+    }
+
+    &:hover {
+        background: transparent;
+
+        img:nth-child(1) {
+            display: none;
+        }
+
+        img:nth-child(2) {
+            display: block;
+        }
+    }
+}

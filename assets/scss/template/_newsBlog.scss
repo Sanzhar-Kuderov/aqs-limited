@@ -1,0 +1,150 @@
+//
+//
+//
+//
+// ====================================================================================
+.main.newsBlog {}
+
+// ====================================================================================
+.return-newsBlog {}
+
+.return-newsBlog__body {
+    margin: 0px 0px 44px 0px;
+    padding: 50px 25px;
+    border-bottom: 1px solid $colorECE7E2;
+}
+
+.return-newsBlog__link {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        .return-newsBlog__img {
+            border: 2px solid $colorDD5900;
+            background: transparent;
+
+            img:nth-child(1) {
+                display: none;
+            }
+
+            img:nth-child(2) {
+                display: block;
+            }
+        }
+
+        .return-newsBlog__text {
+            color: $colorDD5900;
+        }
+    }
+}
+
+.return-newsBlog__img {
+    margin: 0px 18px 0px 0px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $colorECE7E2;
+    border-radius: 50%;
+    background: $colorECE7E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+
+    img:last-child {
+        display: none;
+    }
+}
+
+.return-newsBlog__text {
+    font-family: $famileUbuntu;
+    font-size: 18px;
+    font-weight: 300;
+    color: $color777777;
+    transform-origin: 0.3s all;
+}
+
+// ====================================================================================
+.content-newsBlog {}
+
+.content-newsBlog__body {
+    padding: 0px 0px 40px 0px;
+}
+
+.content-newsBlog__title {
+    margin: 0px 0px 30px 0px;
+    font-family: $famileUbuntu;
+    font-size: 34px;
+    line-height: 40px;
+    color: $colorBlack;
+}
+
+.content-newsBlog__text {
+    margin: 0px 0px 30px;
+    font-family: $famileUbuntu;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color666666;
+}
+
+.content-newsBlog__banner {
+    margin: 0px 0px 30px 0px;
+    padding: 30px 0px;
+    border-top: 1px solid $colorDD5900;
+    border-bottom: 1px solid $colorDD5900;
+
+    font-family: $famileUbuntu;
+    font-size: 18px;
+    line-height: 24px;
+    color: $colorDD5900;
+}
+
+.content-newsBlog__imgs {
+    margin: 0px -16px 30px;
+    width: 100%;
+    display: flex;
+}
+
+.content-newsBlog__img {
+    margin: 0px 16px;
+    width: 100%;
+
+    &:last-child {
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media(max-width: 770px) {
+    .content-newsBlog__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .content-newsBlog__text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .content-newsBlog__banner {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .content-newsBlog__imgs {
+        margin: 0px 0px 30px;
+        flex-direction: column;
+    }
+
+    .content-newsBlog__img {
+        margin: 0px 0px 20px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

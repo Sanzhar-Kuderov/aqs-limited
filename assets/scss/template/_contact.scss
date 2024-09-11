@@ -1,0 +1,108 @@
+//
+//
+//
+//
+// ====================================================================================
+.main.contact {}
+
+// ====================================================================================
+.about-contact {}
+
+.about-contact__body {
+    padding: 44px 0px 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-contact__content {
+    margin: 0px 50px 0px 0px;
+    width: 384px;
+}
+
+.about-contact__content-body {
+    padding: 60px 40px 70px;
+    height: 100%;
+    border: 1px solid $colorECE7E2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-contact__content-item {
+    margin: 0px 0px 30px;
+    display: flex;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.about-contact__content-img {
+    margin: 0px 20px 0px 0px;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: $colorDD5900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-contact__content-info {}
+
+.about-contact__content-title {
+    margin: 0px 0px 5px;
+    font-family: $famileUbuntu;
+    font-size: 19px;
+    line-height: 24px;
+    color: $color9C9C9C;
+}
+
+.about-contact__content-link {
+    font-family: $famileUbuntu;
+    font-size: 20px;
+    line-height: 24px;
+    color: $colorBlack;
+    transition: 0.3s all;
+
+    &:hover {
+        color: $colorDD5900;
+    }
+
+}
+
+.about-contact__map {
+    width: 100%;
+
+    iframe {
+        width: 100%;
+        max-height: 450px;
+    }
+}
+
+@media(max-width: 900px) {
+    .about-contact__body {
+        flex-direction: column;
+    }
+
+    .about-contact__content {
+        margin: 0px 0px 30px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 770px) {
+    .about-contact__content-body {
+        padding: 40px 20px;
+    }
+
+    .about-contact__content-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .about-contact__content-link {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

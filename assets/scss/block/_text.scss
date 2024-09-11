@@ -1,0 +1,28 @@
+//
+//
+//
+//
+// ====================================================================================
+.title {
+    font-family: $famileUbuntu;
+    font-size: 33px;
+    line-height: 48px;
+    font-weight: 500;
+    color: $colorBlack;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 42px;
+        height: 3px;
+        background: $colorDD5900;
+    }
+
+    @media(max-width: 770px) {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
