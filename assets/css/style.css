@@ -555,6 +555,189 @@ html {
     line-height: 30px;
   }
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20000;
+}
+.modal.active {
+  display: block;
+}
+.modal .container {
+  height: 100%;
+}
+
+.modal__body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal__fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #151515;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.modal__form {
+  padding: 80px 60px 60px 60px;
+  width: 500px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.modal__form-exit {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+.modal__form-exit:hover .modal__form-img {
+  background: #fff;
+}
+.modal__form-exit:hover .modal__form-img span::before,
+.modal__form-exit:hover .modal__form-img span {
+  background: #DD5900;
+}
+
+.modal__form-img {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #DD5900;
+  border-radius: 50%;
+  background: #DD5900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.modal__form-img span {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  position: relative;
+  transition: 0.3s all;
+  transform: rotate(45deg);
+}
+.modal__form-img span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: rotate(90deg);
+  transition: 0.3s all;
+}
+
+.modal__form-title {
+  margin: auto;
+  padding: 0px 0px 30px;
+}
+
+.modal__form-input {
+  margin: 0px 0px 20px;
+  padding: 16px 20px;
+  width: 100%;
+  display: block;
+  background: #ECE7E2;
+  font-family: Ubuntu;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.modal__form-textarea {
+  margin: 0px 0px 20px;
+  padding: 16px 20px;
+  width: 100%;
+  display: block;
+  resize: none;
+  background: #ECE7E2;
+  font-family: Ubuntu;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.modal__form-submit {
+  padding: 14px 50px;
+  width: 100%;
+  border: 2px solid #DD5900;
+  border-radius: 50px;
+  background: #DD5900;
+  cursor: pointer;
+  transition: 0.3s all;
+  font-family: Ubuntu;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #fff;
+}
+.modal__form-submit:hover {
+  background: transparent;
+  color: #DD5900;
+}
+
+@media (max-width: 550px) {
+  .modal__form {
+    padding: 100px 20px 60px;
+  }
+  .modal__form-exit {
+    right: 10px;
+  }
+}
+.alert.alert-success.alert-dismissible {
+  margin: 0px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.alert.alert-success.alert-dismissible .close {
+  display: none;
+}
+.alert.alert-success.alert-dismissible p {
+  width: 100%;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
+  color: green;
+}
+
+.alert.alert-danger.alert-dismissible {
+  margin: 0px 0px 10px;
+}
+.alert.alert-danger.alert-dismissible .close {
+  display: none;
+}
+.alert.alert-danger.alert-dismissible h4,
+.alert.alert-danger.alert-dismissible li {
+  width: 100%;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
+  color: red;
+}
+
 .fullscreen-home {
   width: 100%;
   height: calc(100vh - 89.5px);
@@ -632,6 +815,7 @@ html {
   line-height: 18px;
   font-weight: 700;
   color: #fff;
+  cursor: pointer;
   transition: 0.3s all;
 }
 .fullscreen-home__link:hover {
@@ -1849,9 +2033,32 @@ html {
 }
 .content-vacancy__form-file label p {
   font-family: Ubuntu;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.form-group {
+  margin: 0px 0px 20px;
+}
+.form-group .form-group__main-title {
+  margin: 0px 0px 5px;
+  font-family: Ubuntu;
   font-size: 18px;
   line-height: 24px;
   text-decoration: underline;
+}
+.form-group .text-muted {
+  padding: 0px 84px 0px 0px;
+  display: inline-block;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
+}
+.form-group .button {
+  padding: 10px 20px;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .content-vacancy__form-submit {
@@ -2335,6 +2542,7 @@ html {
   font-weight: 700;
   color: #fff;
   transition: 0.3s all;
+  cursor: pointer;
 }
 .main-footer__submit-link:hover {
   background: transparent;

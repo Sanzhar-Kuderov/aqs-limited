@@ -16,7 +16,7 @@ $('.content-vacancy__column-info').click(function (event) {
     $('.content-vacancy__column-body').toggleClass('active');
 })
 
-$('#filter-phone').mask('+7 (999) 999-99-99');
+$('#filter-phone, #modal-filter-phone').mask('+7 (999) 999-99-99');
 
 $('.news-home__content').slick({
     arrows: true,

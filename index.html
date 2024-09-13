@@ -169,7 +169,7 @@
                             бурение с двойным колонковым набором с отбором керна диаметров
                         </div>
                         <div class="fullscreen-home__submit">
-                            <a href="contect.html" class="fullscreen-home__link">Cвяжитесь с нами</a>
+                            <div class="fullscreen-home__link modal-active" id="">Cвяжитесь с нами</div>
                         </div>
                     </div>
                 </div>
@@ -376,6 +376,31 @@
             </div>
         </div>
 
+        <div class="modal" id="modal">
+            <div class="container">
+                <div class="modal__body">
+                    <div class="modal__fullscreen" id="modal-exit-fullscreen"></div>
+                    <form action="" class="modal__form">
+                        <div class="modal__form-exit">
+                            <div class="modal__form-img" id="mobal-exit-form">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="modal__form-title">
+                            <div class="modal__form-title-body title">
+                                Cвяжитесь с нами
+                            </div>
+                        </div>
+                        <input type="text" class="modal__form-input" placeholder="Ваше имя" required>
+                        <input type="tel" class="modal__form-input" placeholder="+7 (...)"
+                            attern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="modal-filter-phone" required>
+                        <textarea name="" id="" class="modal__form-textarea" placeholder="Ваш комментарий"></textarea>
+                        <input type="submit" class="modal__form-submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <footer class="footer">
             <div class="main-footer">
                 <div class="container">
@@ -479,6 +504,7 @@
     <script src="assets/js/jquery.maskedinput.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/modal.js"></script>
 
 </body>
 

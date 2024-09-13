@@ -180,10 +180,36 @@
 
         p {
             font-family: $famileUbuntu;
-            font-size: 18px;
+            font-size: 15px;
             line-height: 24px;
-            text-decoration: underline;
         }
+    }
+}
+
+.form-group {
+    margin: 0px 0px 20px;
+
+    .form-group__main-title {
+        margin: 0px 0px 5px;
+        font-family: $famileUbuntu;
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration: underline;
+    }
+
+    .text-muted {
+        padding: 0px 84px 0px 0px;
+        display: inline-block;
+        font-family: $famileUbuntu;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-family: $famileUbuntu;
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 

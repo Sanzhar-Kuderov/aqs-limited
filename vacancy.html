@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://aqs.abcsup.kz/plugins/martin/forms/assets/css/uploader.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>AQS</title>
 </head>
@@ -462,7 +463,22 @@
                                 <div class="content-vacancy__menu-title title">
                                     Если вы хотите сотрудничать с нами, заполните следущие поля:
                                 </div>
+
                                 <form action="" class="content-vacancy__menu-form">
+
+
+                                    <div id="vacancyForm_forms_flash">
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert"
+                                                aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <h4>В вашей заявке содержатся ошибки.</h4>
+                                            <ul>
+                                                <li>Поле резюме обязательно для заполнения.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
                                     <input type="text" class="content-vacancy__form-input" placeholder="Вакансия"
                                         required>
                                     <input type="name" class="content-vacancy__form-input" placeholder="Имя и Фамилия"
@@ -471,13 +487,73 @@
                                         required>
                                     <input type="email" class="content-vacancy__form-input"
                                         placeholder="Электронная почта" required>
-                                    <div class="content-vacancy__form-file">
-                                        <input type="file" id="file">
+
+                                    <!-- <div class="content-vacancy__form-file">
+                                        <input type="file" id="file" required>
                                         <label for="file">
                                             <img src="assets/img/icon/file.svg" alt="file">
                                             <p>Прикрепите ваше резюме</p>
                                         </label>
+                                    </div> -->
+
+                                    <div class="form-group">
+
+                                        <p class="form-group__main-title">Прикрепите ваше резюме</p>
+
+                                        <div class="responsiv-uploader-fileupload style-file-single "
+                                            data-control="fileupload" data-template="#uploaderTemplateuploadForm"
+                                            data-unique-id="uploadForm"
+                                            data-file-types=".jpg,.jpeg,.bmp,.png,.webp,.gif,.svg,.js,.map,.ico,.css,.less,.scss,.ics,.odt,.doc,.docx,.pdf,.swf,.txt,.xml,.ods,.xls,.xlsx,.eot,.woff,.woff2,.ttf,.flv,.wmv,.mp3,.ogg,.wav,.avi,.mov,.mp4,.mpeg,.webm,.mkv,.rar,.zip,.pptx,.ppt,.pdf,.zip">
+
+                                            <!-- Field placeholder -->
+                                            <input type="hidden" name="_uploader[files]" value="">
+
+                                            <!-- Upload button -->
+                                            <button type="button"
+                                                class="ui button btn btn-default upload-button dz-clickable">
+                                                Browse
+                                            </button>
+
+                                            <!-- Existing file -->
+                                            <div class="upload-files-container">
+                                            </div>
+
+                                            <!-- Empty message -->
+                                            <div class="upload-empty-message">
+                                                <span class="text-muted">Нажмите или перетащите файлы для
+                                                    загрузки</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Template for new file -->
+                                        <script type="text/template" id="uploaderTemplateuploadForm">
+                                            <div class="upload-object dz-preview dz-file-preview">
+                                                <div class="icon-container">
+                                                    <img data-dz-thumbnail />
+                                                </div>
+                                                <div class="info">
+                                                    <h4 class="filename">
+                                                        <span data-dz-name></span>
+                                                    </h4>
+                                                    <p class="size" data-dz-size></p>
+                                                    <p class="error"><span data-dz-errormessage></span></p>
+                                                </div>
+                                                <div class="meta">
+                                                    <a
+                                                        href="javascript:;"
+                                                        class="upload-remove-button"
+                                                        data-request="uploadForm::onRemoveAttachment"
+                                                        data-request-confirm="Are you sure?"
+                                                        >&times;</a>
+                                                    <div class="progress-bar"><span class="upload-progress" data-dz-uploadprogress></span></div>
+                                                </div>
+                                            </div>
+                                        </script>
+
+
                                     </div>
+
                                     <div class="content-vacancy__form-submit">
                                         <input type="submit" class="content-vacancy__formSubmit-link" value="Отправить">
                                     </div>
