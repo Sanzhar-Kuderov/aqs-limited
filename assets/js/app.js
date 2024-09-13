@@ -11,12 +11,27 @@ document.querySelector('#smartphone_menu_exit').addEventListener('click', functi
 })
 
 
+$.fn.setCursorPosition = function (pos) {
+    if ($(this).get(0).setSelectionRange) {
+        $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+        var range = $(this).get(0).createTextRange();
+        range.collapse(true);
+        range.moveEnd("character", pos);
+        range.moveStart("character", pos);
+        range.select();
+    }
+};
+
+$("input[type='tel']").click(function () {
+    $(this).setCursorPosition(3);
+}).mask("+7(999) 999-9999");
+
+
 $('.content-vacancy__column-info').click(function (event) {
     $(this).next().slideToggle(300);
     $('.content-vacancy__column-body').toggleClass('active');
 })
-
-$('#filter-phone, #modal-filter-phone').mask('+7 (999) 999-99-99');
 
 $('.news-home__content').slick({
     arrows: true,
@@ -83,7 +98,7 @@ $('.client-home__content').slick({
 
 $('.certificate-about__content').slick({
     arrows: false,
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 3,
     speed: 500,

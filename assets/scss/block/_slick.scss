@@ -58,3 +58,34 @@
 
 /* Элемент точки */
 .slick-dots li button {}
+
+.slick-dots {
+    margin: 35px 0px 0px;
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin: 0px 7px 0px 0px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid $colorWhite;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s all;
+    }
+
+    .slick-active {
+        border: 1px solid $colorBlack;
+    }
+
+    button {
+        width: 3.75px;
+        height: 3.75px;
+        border-radius: 50%;
+        background: $colorBlack;
+        font-size: 0;
+    }
+}

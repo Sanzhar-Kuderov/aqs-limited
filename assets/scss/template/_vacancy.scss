@@ -188,13 +188,42 @@
 
 .form-group {
     margin: 0px 0px 20px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    position: relative;
 
     .form-group__main-title {
-        margin: 0px 0px 5px;
+        position: absolute;
+        top: -4px;
+        right: 0px;
         font-family: $famileUbuntu;
         font-size: 18px;
         line-height: 24px;
         text-decoration: underline;
+        order: 2;
+    }
+
+    .responsiv-uploader-fileupload.style-file-single {
+        margin: 0px 0px 0px 0px;
+        position: relative;
+        width: 100%;
+        height: 20px;
+        border: 0;
+        overflow: auto;
+        background: url('../img/icon/file.svg') 0 0 / 20px 20px no-repeat;
+    }
+
+    .upload-files-container {
+
+        .info,
+        .meta {
+            display: none;
+        }
+    }
+
+    .upload-empty-message {
+        display: none;
     }
 
     .text-muted {
@@ -206,10 +235,15 @@
     }
 
     .button {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         padding: 10px 20px;
+        background: transparent;
         font-family: $famileUbuntu;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 0px;
+        line-height: 0px;
     }
 }
 

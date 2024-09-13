@@ -460,6 +460,34 @@ html {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
+.slick-dots {
+  margin: 35px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+.slick-dots li {
+  margin: 0px 7px 0px 0px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.slick-dots .slick-active {
+  border: 1px solid #151515;
+}
+.slick-dots button {
+  width: 3.75px;
+  height: 3.75px;
+  border-radius: 50%;
+  background: #151515;
+  font-size: 0;
+}
+
 .title {
   font-family: Ubuntu;
   font-size: 33px;
@@ -497,8 +525,8 @@ html {
 
 .social__img-whatsapp {
   margin: 0px 0px 10px;
-  width: 48px;
-  height: 48px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: #1BBD2B;
   display: flex;
@@ -506,12 +534,12 @@ html {
   align-items: center;
 }
 .social__img-whatsapp img {
-  width: 30px;
+  width: 40px;
 }
 
 .social__img-link-header {
-  width: 48px;
-  height: 48px;
+  width: 70px;
+  height: 70px;
   border: 2px solid #DD5900;
   border-radius: 50%;
   background: #DD5900;
@@ -533,6 +561,19 @@ html {
   display: block;
 }
 
+@media (max-width: 770px) {
+  .social__img-whatsapp {
+    width: 50px;
+    height: 50px;
+  }
+  .social__img-whatsapp img {
+    width: 25px;
+  }
+  .social__img-link-header {
+    width: 50px;
+    height: 50px;
+  }
+}
 .mini-navigation__body {
   padding: 65px 0px 35px;
   border-bottom: 1px solid #D9D9D9;
@@ -824,6 +865,9 @@ html {
 }
 
 @media (max-width: 770px) {
+  .fullscreen-home {
+    height: 500px;
+  }
   .fullscreen-home__title {
     margin: 0px 0px 20px;
     font-size: 25px;
@@ -2039,13 +2083,36 @@ html {
 
 .form-group {
   margin: 0px 0px 20px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .form-group .form-group__main-title {
-  margin: 0px 0px 5px;
+  position: absolute;
+  top: -4px;
+  right: 0px;
   font-family: Ubuntu;
   font-size: 18px;
   line-height: 24px;
   text-decoration: underline;
+  order: 2;
+}
+.form-group .responsiv-uploader-fileupload.style-file-single {
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  width: 100%;
+  height: 20px;
+  border: 0;
+  overflow: auto;
+  background: url("../img/icon/file.svg") 0 0/20px 20px no-repeat;
+}
+.form-group .upload-files-container .info,
+.form-group .upload-files-container .meta {
+  display: none;
+}
+.form-group .upload-empty-message {
+  display: none;
 }
 .form-group .text-muted {
   padding: 0px 84px 0px 0px;
@@ -2055,10 +2122,15 @@ html {
   line-height: 20px;
 }
 .form-group .button {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   padding: 10px 20px;
+  background: transparent;
   font-family: Ubuntu;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0px;
+  line-height: 0px;
 }
 
 .content-vacancy__form-submit {
@@ -2473,6 +2545,129 @@ html {
   .about-contact__content-link {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+.content-search {
+  padding: 30px 0px 75px;
+}
+.content-search .container {
+  width: 600px;
+}
+
+.content-search__body p {
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
+}
+.content-search__body .ss-result {
+  margin: 0px 0px 20px;
+}
+.content-search__body .ss-search-form__input {
+  margin: 0px 0px 40px;
+}
+.content-search__body .ss-search-form__input input {
+  margin: 0px 0px 20px;
+  padding: 16px 20px;
+  width: 100%;
+  display: block;
+  background: #ECE7E2;
+  font-family: Ubuntu;
+  font-size: 15px;
+  line-height: 24px;
+}
+.content-search__body .ss-search-form__input button {
+  padding: 14px 50px;
+  border: 2px solid #DD5900;
+  border-radius: 50px;
+  background: #DD5900;
+  cursor: pointer;
+  transition: 0.3s all;
+  font-family: Ubuntu;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #fff;
+}
+.content-search__body .ss-search-form__input button:hover {
+  background: transparent;
+  color: #DD5900;
+}
+.content-search__body .ss-result .ss-result__text {
+  margin: 0px 0px 10px;
+}
+.content-search__body .ss-result .ss-result__title a {
+  margin: 0px 0px 10px;
+  display: inline-block;
+  font-family: Ubuntu;
+  font-size: 20px;
+  line-height: 24px;
+  color: #151515;
+  transition: 0.3s all;
+}
+.content-search__body .ss-result .ss-result__title a:hover {
+  color: #DD5900;
+}
+.content-search__body .ss-result .ss-result__text {
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
+}
+.content-search__body .ss-result .ss-result__text mark {
+  background: #DD5900;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+.content-search__body .ss-result .ss-result__url a {
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 22px;
+  color: #151515;
+  transition: 0.3s all;
+}
+.content-search__body .ss-result .ss-result__url a:hover {
+  color: #DD5900;
+}
+
+.search__title {
+  margin: 0px 0px 30px;
+}
+
+.search__item.item-search {
+  margin: 0px 0px 20px;
+}
+
+.item-search__title {
+  margin: 0px 0px 5px;
+  font-family: Ubuntu;
+  font-size: 14p;
+  line-height: 20px;
+  color: #151515;
+}
+
+.item-search__text {
+  margin: 0px 0px 5px;
+  font-family: Ubuntu;
+  font-size: 14p;
+  line-height: 20px;
+  color: #151515;
+}
+
+.item-search__link {
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 20px;
+  color: #151515;
+  transition: 0.3s all;
+}
+.item-search__link:hover {
+  color: #DD5900;
+}
+
+@media (max-width: 650px) {
+  .content-search .container {
+    width: 100%;
   }
 }
 .footer {

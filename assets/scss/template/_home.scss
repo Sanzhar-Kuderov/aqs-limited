@@ -96,6 +96,10 @@
 }
 
 @media(max-width: 770px) {
+    .fullscreen-home {
+        height: 500px;
+    }
+
     .fullscreen-home__title {
         margin: 0px 0px 20px;
         font-size: 25px;

@@ -16,8 +16,8 @@
 
 .social__img-whatsapp {
     margin: 0px 0px 10px;
-    width: 48px;
-    height: 48px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background: #1BBD2B;
     display: flex;
@@ -25,13 +25,13 @@
     align-items: center;
 
     img {
-        width: 30px;
+        width: 40px;
     }
 }
 
 .social__img-link-header {
-    width: 48px;
-    height: 48px;
+    width: 70px;
+    height: 70px;
     border: 2px solid $colorDD5900;
     border-radius: 50%;
     background: $colorDD5900;
@@ -54,5 +54,22 @@
         img:nth-child(2) {
             display: block;
         }
+    }
+}
+
+@media(max-width: 770px) {
+
+    .social__img-whatsapp {
+        width: 50px;
+        height: 50px;
+
+        img {
+            width: 25px;
+        }
+    }
+
+    .social__img-link-header {
+        width: 50px;
+        height: 50px;
     }
 }
